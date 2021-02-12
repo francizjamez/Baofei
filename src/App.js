@@ -1,23 +1,65 @@
-import logo from './logo.svg';
-import './App.css';
+import Header from './Components/Header.jsx';
+import NavBar from './Components/NavBar.jsx';
+import Order from './Components/Order.jsx'
+import React, { useState } from 'react';
+import "./Styles/Styles.css"
 
 function App() {
+
+  const [order, setOrder] = useState(false);
+  const [items, setItems] = useState([
+    {
+      name: 'milk tea',
+      orderCount: 0
+    },
+    {
+      name: 'tea of tears',
+      orderCount: 0
+    },
+    {
+      name: 'Frenchies',
+      orderCount: 0
+    }
+  ]);
+
+  const addItem = (name) => {
+
+    let newItems = items.map((item) => {
+      if(item.name === name){
+        item.orderCount++;
+        console.log(item.name, item.orderCount);
+      }
+      return item;
+      });
+
+      setItems(newItems);;
+  }
+
+  const reduceItem = (name) => {
+
+    let newItems = items.map((item) => {
+      if(item.name === name){
+        item.orderCount--;
+        if(item.orderCount < 0){
+          item.orderCount = 0;
+        }
+        console.log(item.name, item.orderCount);
+      }
+      return item;
+      });
+
+      setItems(newItems);
+  }
+
+  const toggleOrder = () => {
+      setOrder(!order)
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="main">
+      <NavBar />
+      <Header className ="header"/>
+      <Order items={items} onAdd ={addItem} onReduce ={reduceItem} showOrder={order} onOrder={toggleOrder}/>
     </div>
   );
 }

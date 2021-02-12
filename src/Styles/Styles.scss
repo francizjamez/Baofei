@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Jomhuria&display=swap');
+@import "C:/Users/PC/OneDrive/Documents/Baofei/baofei/node_modules/bootstrap/scss/bootstrap";
+.main{
+    font-family: 'Jomhuria', cursive;
+}
+
+.header{
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+
+     margin: 10px;
+
+    .baofei-logo{
+        width: 150px;
+        height: auto;
+    }
+    .baofei-text{
+        font-size: 75px;
+        color: $green-700;
+    }
+}
+
+nav {
+
+    a{
+        font-size: 2em !important;
+    }
+}
