@@ -23,13 +23,12 @@ const Item = ({ item, onAdd, onReduce }) => {
   return (
     <div style={styleDiv}>
       <h1 style={styleElement}>{name}</h1>
-
       <button
         style={styleElement}
         type="button"
         class="btn btn-secondary"
         onClick={() => onReduce(name)}
-        disabled = {orderCount ===0? true: false}
+        disabled={orderCount === 0 ? true : false}
         // {orderCount === 0 && "disabled"}
       >
         -
