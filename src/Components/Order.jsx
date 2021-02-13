@@ -3,12 +3,12 @@ import Item from "./Item.jsx";
 
 const styleButton = {
   fontSize: 30,
+  alignSelf: "center",
 };
 
 const styleDiv = {
   display: "flex",
   flexDirection: "column",
-  alignItems: "center",
 };
 
 const Order = ({ items, onAdd, onReduce, showOrder, onOrder }) => {
