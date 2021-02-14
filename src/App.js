@@ -52,10 +52,21 @@ function App() {
     setOrder(!order);
   };
 
+  let buttonClass = "btn ";
+  buttonClass += order ? "btn-danger" : "btn-primary";
+
   return (
     <div className="main">
       <NavBar />
       <Header className="header" />
+      <button
+        id="btnOrder"
+        type="button"
+        className={buttonClass}
+        onClick={toggleOrder}
+      >
+        {order ? "Cancel" : "Order Now"}
+      </button>
       <Order
         items={items}
         onAdd={addItem}

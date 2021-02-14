@@ -1,30 +1,9 @@
 import "../Styles/Styles.css";
 import Item from "./Item.jsx";
 
-const styleButton = {
-  fontSize: 30,
-  alignSelf: "center",
-};
-
-const styleDiv = {
-  display: "flex",
-  flexDirection: "column",
-};
-
 const Order = ({ items, onAdd, onReduce, showOrder, onOrder }) => {
-  let buttonClass = "btn ";
-  buttonClass += showOrder ? "btn-danger" : "btn-primary";
-
   return (
-    <div style={styleDiv}>
-      <button
-        type="button"
-        style={styleButton}
-        class={buttonClass}
-        onClick={onOrder}
-      >
-        {showOrder ? "Cancel" : "Order Now"}
-      </button>
+    <div id="orderForm">
       {showOrder &&
         items.map((item) => {
           return <Item item={item} onAdd={onAdd} onReduce={onReduce} />;

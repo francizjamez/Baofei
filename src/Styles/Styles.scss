@@ -1,29 +1,62 @@
-@import url('https://fonts.googleapis.com/css2?family=Jomhuria&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Jomhuria&display=swap");
 @import "C:/Users/PC/OneDrive/Documents/Baofei/baofei/node_modules/bootstrap/scss/bootstrap";
-.main{
-    font-family: 'Jomhuria', cursive;
+.main {
+  font-family: "Jomhuria", cursive;
+  display: flex;
+  flex-direction: column;
+
+  #btnOrder {
+    align-self: center;
+    margin-bottom: 1em;
+  }
 }
-
-.header{
-     display: flex;
-     flex-direction: column;
-     align-items: center;
-
-     margin: 10px;
-
-    .baofei-logo{
-        width: 150px;
-        height: auto;
-    }
-    .baofei-text{
-        font-size: 75px;
-        color: $green-700;
-    }
-}
-
 nav {
+  a {
+    font-size: 2em !important;
+  }
+}
 
-    a{
-        font-size: 2em !important;
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px;
+
+  .baofei-logo {
+    width: 150px;
+    height: auto;
+  }
+  .baofei-text {
+    font-size: 75px;
+    color: $green-700;
+  }
+}
+
+#orderForm {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(57, 71, 57);
+  align-self: center;
+  align-items: center;
+  border-radius: 1em;
+  margin-bottom: 3em;
+
+  #item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    width: 90%;
+    height: 90%;
+    margin: 3em;
+    border-radius: 0.5em;
+
+    .itemElement {
+      margin: 50px;
+      position: sticky;
     }
+    #itemNumber {
+      font-size: 2em;
+    }
+  }
 }
