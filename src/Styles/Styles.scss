@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Jomhuria&display=swap");
 @import "C:/Users/PC/OneDrive/Documents/Baofei/baofei/node_modules/bootstrap/scss/bootstrap";
+
+#root {
+  width: 100vw;
+}
 .main {
   font-family: "Jomhuria", cursive;
   display: flex;
@@ -44,19 +48,27 @@ nav {
   #item {
     display: flex;
     align-items: center;
-    justify-content: center;
     background-color: white;
-    width: 90%;
-    height: 90%;
-    margin: 3em;
+    margin: 1em;
     border-radius: 0.5em;
+    align-self: stretch;
+    justify-content: space-between;
 
     .itemElement {
-      margin: 50px;
-      position: sticky;
+      margin: 1em;
+      font-size: 1.5rem;
+    }
+    .even-spacing {
+      width: 5em;
+      max-width: 5em;
     }
     #itemNumber {
-      font-size: 2em;
+      width: 2.5em;
+      max-width: 2.5em;
     }
+  }
+
+  #orderTotal {
+    color: white;
   }
 }

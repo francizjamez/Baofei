@@ -10,14 +10,20 @@ function App() {
     {
       name: "milk tea",
       orderCount: 0,
+      price: 65,
+      total: 0,
     },
     {
       name: "tea of tears",
       orderCount: 0,
+      price: 100,
+      total: 0,
     },
     {
       name: "Frenchies",
       orderCount: 0,
+      price: 45,
+      total: 0,
     },
   ]);
 
@@ -29,7 +35,6 @@ function App() {
       }
       return item;
     });
-
     setItems(newItems);
   };
 
@@ -40,7 +45,6 @@ function App() {
         if (item.orderCount < 0) {
           item.orderCount = 0;
         }
-        console.log(item.name, item.orderCount);
       }
       return item;
     });

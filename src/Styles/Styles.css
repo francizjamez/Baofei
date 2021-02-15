@@ -10112,6 +10112,10 @@ fieldset:disabled .btn {
   }
 }
 
+#root {
+  width: 100vw;
+}
+
 .main {
   font-family: "Jomhuria", cursive;
   display: flex;
@@ -10157,19 +10161,28 @@ nav a {
 #orderForm #item {
   display: flex;
   align-items: center;
-  justify-content: center;
   background-color: white;
-  width: 90%;
-  height: 90%;
-  margin: 3em;
+  margin: 1em;
   border-radius: 0.5em;
+  align-self: stretch;
+  justify-content: space-between;
 }
 
 #orderForm #item .itemElement {
-  margin: 50px;
-  position: sticky;
+  margin: 1em;
+  font-size: 1.5rem;
+}
+
+#orderForm #item .even-spacing {
+  width: 5em;
+  max-width: 5em;
 }
 
 #orderForm #item #itemNumber {
-  font-size: 2em;
+  width: 2.5em;
+  max-width: 2.5em;
+}
+
+#orderForm #orderTotal {
+  color: white;
 }
