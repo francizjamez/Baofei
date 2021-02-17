@@ -1,6 +1,7 @@
 import Header from "./Components/Header.jsx";
 import NavBar from "./Components/NavBar.jsx";
 import Order from "./Components/Order.jsx";
+import Body from "./Components/Body.jsx";
 import React, { useState } from "react";
 import "./Styles/Styles.css";
 
@@ -61,23 +62,18 @@ function App() {
 
   return (
     <div className="main">
-      <NavBar />
-      <Header className="header" />
-      <button
-        id="btnOrder"
-        type="button"
-        className={buttonClass}
-        onClick={toggleOrder}
-      >
-        {order ? "Cancel" : "Order Now"}
-      </button>
-      <Order
-        items={items}
-        onAdd={addItem}
-        onReduce={reduceItem}
-        showOrder={order}
-        onOrder={toggleOrder}
-      />
+      <NavBar order={order} toggleOrder={toggleOrder} />
+      <div id="body">
+        <Header className="header" />
+        <Order
+          items={items}
+          onAdd={addItem}
+          onReduce={reduceItem}
+          showOrder={order}
+          onOrder={toggleOrder}
+        />
+        <Body />
+      </div>
     </div>
   );
 }

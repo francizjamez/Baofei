@@ -10127,6 +10127,11 @@ fieldset:disabled .btn {
   margin-bottom: 1em;
 }
 
+nav {
+  background-color: #517c63;
+  justify-items: center;
+}
+
 nav a {
   font-size: 2em !important;
 }
@@ -10135,7 +10140,8 @@ nav a {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 10px;
+  padding-top: 50px;
+  background-color: #f3f0e9;
 }
 
 .header .baofei-logo {
@@ -10144,7 +10150,6 @@ nav a {
 }
 
 .header .baofei-text {
-  font-size: 75px;
   color: #0f5132;
 }
 
@@ -10154,8 +10159,8 @@ nav a {
   background-color: #394739;
   align-self: center;
   align-items: center;
+  justify-self: center;
   border-radius: 1em;
-  margin-bottom: 3em;
 }
 
 #orderForm #item {
@@ -10185,4 +10190,35 @@ nav a {
 
 #orderForm #orderTotal {
   color: white;
+}
+
+#content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+  background-color: #e7dfcf;
+  padding: 20px;
+}
+
+#content #bubbletea {
+  width: 720px;
+  background: rgba(255, 255, 255, 0.5);
+}
+
+#content h2, #content .h2 {
+  color: #4c525f;
+}
+
+#body {
+  display: flex;
+  flex-direction: column;
+}
+
+#body h1, #body .h1 {
+  font-size: 80px;
+}
+
+#body h2, #body .h2 {
+  font-size: 40px;
 }

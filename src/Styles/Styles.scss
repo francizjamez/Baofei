@@ -1,6 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Jomhuria&display=swap");
 @import "C:/Users/PC/OneDrive/Documents/Baofei/baofei/node_modules/bootstrap/scss/bootstrap";
 
+$green: #517c63;
+$pale: #e7dfcf;
+$dirty-white: #f3f0e9;
+$grey-black: #4c525f;
 #root {
   width: 100vw;
 }
@@ -8,13 +12,15 @@
   font-family: "Jomhuria", cursive;
   display: flex;
   flex-direction: column;
-
   #btnOrder {
     align-self: center;
     margin-bottom: 1em;
   }
 }
+
 nav {
+  background-color: $green;
+  justify-items: center;
   a {
     font-size: 2em !important;
   }
@@ -24,14 +30,14 @@ nav {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 10px;
+  padding-top: 50px;
+  background-color: $dirty-white;
 
   .baofei-logo {
     width: 150px;
     height: auto;
   }
   .baofei-text {
-    font-size: 75px;
     color: $green-700;
   }
 }
@@ -42,8 +48,8 @@ nav {
   background-color: rgb(57, 71, 57);
   align-self: center;
   align-items: center;
+  justify-self: center;
   border-radius: 1em;
-  margin-bottom: 3em;
 
   #item {
     display: flex;
@@ -70,5 +76,33 @@ nav {
 
   #orderTotal {
     color: white;
+  }
+}
+
+#content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+  background-color: $pale;
+  padding: 20px;
+
+  #bubbletea {
+    width: 720px;
+    background: rgba(255, 255, 255, 0.5);
+  }
+  h2 {
+    color: $grey-black;
+  }
+}
+
+#body {
+  display: flex;
+  flex-direction: column;
+  h1 {
+    font-size: 80px;
+  }
+  h2 {
+    font-size: 40px;
   }
 }
