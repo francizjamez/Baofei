@@ -19,10 +19,20 @@ $grey-black: #4c525f;
 }
 
 nav {
+  display: flex;
   background-color: $green;
   justify-items: center;
+  align-items: center;
   a {
     font-size: 2em !important;
+  }
+  button {
+    height: auto;
+  }
+
+  #container-fluid {
+    justify-items: center;
+    align-items: center;
   }
 }
 
@@ -88,7 +98,8 @@ nav {
   padding: 20px;
 
   #bubbletea {
-    width: 720px;
+    max-width: 720px;
+    width: 100vw;
     background: rgba(255, 255, 255, 0.5);
   }
   h2 {

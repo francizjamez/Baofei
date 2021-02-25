@@ -10128,12 +10128,23 @@ fieldset:disabled .btn {
 }
 
 nav {
+  display: flex;
   background-color: #517c63;
   justify-items: center;
+  align-items: center;
 }
 
 nav a {
   font-size: 2em !important;
+}
+
+nav button {
+  height: auto;
+}
+
+nav #container-fluid {
+  justify-items: center;
+  align-items: center;
 }
 
 .header {
@@ -10202,7 +10213,8 @@ nav a {
 }
 
 #content #bubbletea {
-  width: 720px;
+  max-width: 720px;
+  width: 100vw;
   background: rgba(255, 255, 255, 0.5);
 }
 
