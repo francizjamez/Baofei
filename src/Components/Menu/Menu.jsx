@@ -17,15 +17,13 @@ const Menu = () => {
     <section class="menu" id="menu">
       <h1>MENU</h1>
       <div class="grid-container">
-        <div>
-          {menuItems.length > 0 &&
-            menuItems.map(({ menuName, img }) => (
-              <a href={`menu/${menuName}`}>
-                <img class="menu-image" src={img} alt={menuName} />
-                <p>{menuName}</p>
-              </a>
-            ))}
-        </div>
+        {menuItems.length > 0 &&
+          menuItems.map(({ menuName, img }) => (
+            <a href={`/menu/${menuName}`}>
+              <img class="menu-image" src={img} alt={menuName} />
+              <p>{menuName}</p>
+            </a>
+          ))}
       </div>
     </section>
   );
